@@ -5,7 +5,7 @@ import itertools
 import numpy as np
 # import seaborn as sb
 import re
-import nltk
+# import nltk
 import pickle
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
