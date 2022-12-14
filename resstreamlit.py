@@ -17,7 +17,7 @@ import numpy as np
 # from nltk.corpus import stopwords
 
 st.title('Fake News Detection Results')
-train_df = pd.read_csv(r'C:\Users\Fanuel Mulyadi\FakeNews\train.csv')
+train_df = pd.read_csv(r'train.csv')
 st.text(train_df.head(15))
 
 
