@@ -54,10 +54,10 @@ train_df = train_df.drop("Label", axis = 1)
 st.text(train_df.head(10))
 train_df['Statement'][2188]
 
-st.subheader('Stopwords')
-lemmatizer = WordNetLemmatizer()
-stpwrds = list(stopwords.words('english'))
-st.markdown(stpwrds)
+# st.subheader('Stopwords')
+# lemmatizer = WordNetLemmatizer()
+# stpwrds = list(stopwords.words('english'))
+# st.markdown(stpwrds)
 
 st.subheader('Training')
 X_train, X_test, Y_train, Y_test = train_test_split(train_df['Statement'], label_train, test_size=0.3, random_state=1)
