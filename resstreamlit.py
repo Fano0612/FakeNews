@@ -26,7 +26,7 @@ st.subheader('File Distribution')
 def create_distribution(dataFile):
     return sns.countplot(x='Label', data=dataFile, palette='hls')
 
-st.bar_chart(create_distribution(train_df))
+create_distribution(train_df)
 
 st.subheader('Data Quality')
 def data_qualityCheck():
