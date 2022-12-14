@@ -36,7 +36,7 @@ def data_qualityCheck():
     st.text(train_df.isnull().sum())
     st.text(train_df.info())
     st.text('check finished.')
-st.text(data_qualityCheck())
+data_qualityCheck()
 
 st.subheader('Data After Index Reset')
 st.text(train_df.shape)
