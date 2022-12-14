@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn import metrics
 from sklearn.metrics import confusion_matrix
 from matplotlib import pyplot as plt
