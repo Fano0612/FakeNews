@@ -24,9 +24,10 @@ st.text(train_df.head(15))
 
 st.subheader('File Distribution')
 def create_distribution(dataFile):
-    return sns.countplot(x='Label', data=dataFile, palette='hls')
+    a = sns.countplot(x='Label', data=dataFile, palette='hls')
+    return st.pyplot(a)
 
-st.text(create_distribution(train_df))
+create_distribution(train_df)
 
 st.subheader('Data Quality')
 def data_qualityCheck():
