@@ -32,10 +32,10 @@ create_distribution(train_df)
 
 st.subheader('Data Quality')
 def data_qualityCheck():
-    print("Checking data qualitites...")
-    train_df.isnull().sum()
-    train_df.info()  
-    print("check finished.")
+    st.text('Checking data qualitites...')
+    st.text(train_df.isnull().sum())
+    st.text(train_df.info())
+    st.text('check finished.')
 st.text(data_qualityCheck())
 
 st.subheader('Data After Index Reset')
