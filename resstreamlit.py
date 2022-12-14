@@ -98,8 +98,7 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    plots = plt.subplots()
-    st.pyplot(plots)
+    st.pyplot()
 
 classifier = PassiveAggressiveClassifier()
 classifier.fit(tfidf_X_train,Y_train)
