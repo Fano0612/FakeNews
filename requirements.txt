@@ -4,6 +4,6 @@ scikit-learn
 seaborn
 more-itertools
 regex
-ntlk
+nltk
 pickle
 matplotlib
