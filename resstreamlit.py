@@ -2,11 +2,11 @@ import pandas as pd
 # import numpy as np
 # import sklearn
 # import itertools
-# import seaborn as sb
+import seaborn as sns
 # import re
 # import nltk
 # import pickle
-from sklearn.model_selection import train_test_split
+# from sklearn.model_selection import train_test_split
 # from sklearn.feature_extraction.text import TfidfVectorizer
 # from sklearn import metrics
 # from sklearn.metrics import confusion_matrix
@@ -24,7 +24,7 @@ st.text(train_df.head(15))
 
 st.subheader('File Distribution')
 def create_distribution(dataFile):
-    return sb.countplot(x='Label', data=dataFile, palette='hls')
+    return sns.countplot(x='Label', data=dataFile, palette='hls')
 
 st.bar_chart(create_distribution(train_df))
 
