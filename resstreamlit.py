@@ -24,7 +24,7 @@ st.text(train_df.head(15))
 
 st.subheader('File Distribution')
 def create_distribution(dataFile):
-    return sns.countplot(x='Label', data=dataFile, palette='hls')
+    return st.bar_chart(sns.countplot(x='Label', data=dataFile, palette='hls'))
 
 create_distribution(train_df)
 
