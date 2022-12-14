@@ -1,5 +1,19 @@
 import pandas as pd
 import numpy as np
+import sklearn
+import itertools
+import seaborn as sb
+import re
+import nltk
+import pickle
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn import metrics
+from sklearn.metrics import confusion_matrix
+from matplotlib import pyplot as plt
+from sklearn.linear_model import PassiveAggressiveClassifier
+from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
 import streamlit as st
 
 st.title('Fake News Detection Results')
@@ -10,8 +24,9 @@ st.text(train_df.head(15))
 
 st.subheader('File Distribution')
 def create_distribution(dataFile):
-    return st.bar_chart(x='Label', data=dataFile, palette='hls')
-create_distribution(train_df)
+    return sb.countplot(x='Label', data=dataFile, palette='hls')
+
+st.bar_chart(create_distribution(train_df))
 
 st.subheader('Data Quality')
 def data_qualityCheck():
