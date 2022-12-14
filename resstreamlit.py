@@ -1,4 +1,3 @@
-import seaborn as sb
 import pandas as pd
 import numpy as np
 import streamlit as st
@@ -11,9 +10,8 @@ st.text(train_df.head(15))
 
 st.subheader('File Distribution')
 def create_distribution(dataFile):
-    return sb.countplot(x='Label', data=dataFile, palette='hls')
-
-st.bar_chart(create_distribution(train_df))
+    return st.bar_chart(x='Label', data=dataFile, palette='hls')
+create_distribution(train_df)
 
 st.subheader('Data Quality')
 def data_qualityCheck():
