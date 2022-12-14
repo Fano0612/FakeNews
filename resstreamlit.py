@@ -98,6 +98,8 @@ def plot_confusion_matrix(cm, classes,
     plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    plots = plt.subplots()
+    st.pyplot(plots)
 
 classifier = PassiveAggressiveClassifier()
 classifier.fit(tfidf_X_train,Y_train)
@@ -106,6 +108,8 @@ Y_pred = classifier.predict(tfidf_X_test)
 score = metrics.accuracy_score(Y_test, Y_pred)
 print(f'Accuracy: {round(score*100,2)}%')
 cm = metrics.confusion_matrix(Y_test, Y_pred)
-st.bar_chart(plot_confusion_matrix(cm, classes=['FAKE Data', 'REAL Data']))
-st.text(pickle.dump(classifier,open('./model.pkl', 'wb')))
-st.text(loaded_model = pickle.load(open('./model.pkl', 'rb')))
+plot_confusion_matrix(cm, classes=['FAKE Data', 'REAL Data'])
+
+
+# st.text(pickle.dump(classifier,open('./model.pkl', 'wb')))
+# st.text(loaded_model = pickle.load(open('./model.pkl', 'rb')))
