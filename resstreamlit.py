@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import PassiveAggressiveClassifier
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import stopwords
 
