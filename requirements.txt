@@ -2,7 +2,7 @@ pandas
 streamlit
 scikit-learn
 seaborn
-itertools
+more-itertools
 regex
 ntlk
 pickle
